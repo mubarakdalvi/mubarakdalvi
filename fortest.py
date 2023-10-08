@@ -1,3 +1,26 @@
+# code for finding two students with same score
+a = [[input(), float(input())] for i in range(int(input()))]
+s = sorted(set([x[1] for x in a]))
+for name in sorted(x[0] for x in a if x[1] == s[1]):
+    print(name)
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+
+
+a = input()
+student_marks = {}
+for _ in range(a):
+    name, *line = input()
+
 # code for finding words in re
 import re
 s = 'I live in Dapoli'
@@ -21,3 +44,18 @@ import re
 input1 = 'my contact number is 1111 and my emergency contact number is 2222'
 x = re.findall('[0-9]+', input1)
 print('my first number is key primary_number which is', {x[0]}, 'my second number is emergency_number which is ', {x[1]})
+
+import timeit
+f = 10
+s = int(input('Enter Number : '))
+if f <= 9:
+    print(False)
+elif f >= 10:
+    print(True)
+else:
+    print('Please enter right input')
+for i in range(s):
+    if f >= f:
+        print(i * 2)
+print(timeit.timeit())
+
