@@ -68,7 +68,7 @@ if __name__ == '__main__':
     print_formatted(n)
 '''
 
-#not my logic
+# not my logic
 '''
 def print_rangoli(size):
     for i in range(size):
@@ -82,7 +82,6 @@ if __name__ == '__main__':
     size = int(input())
     print_rangoli(size)
 '''
-
 
 '''
 #not my solution
@@ -127,5 +126,18 @@ def minion_game(s):
 if __name__ == '__main__':
     s = input()
     minion_game(s)
-'''
 
+from itertools import product
+
+def cartesian_product(a, b):
+    for item in product(a, b):
+        print(item,end=' ')
+
+
+if __name__ == '__main__':
+    a = input().split()
+    b = input().split()
+    a = map(int, a)
+    b = map(int, b)
+    cartesian_product(a, b)
+'''
