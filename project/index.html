@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMR</title>
+  <link rel="stylesheet" href="src/output.css" />
+</head>
+
+<body>
+  <!-- <div>This is a box</div>
+
+
+
+  <div id="01" class="zeroone" name="kursi">
+    <p id="02" class="zerotwo" name="palang">Paragraph1</p>
+    <p id="04" class="zerofour" name="mixer">Paragraph2</p>
+    <button id="03" class="zerothree" name="table">Click</button>
+  </div>
+
+  <br>
+
+  <button type="submit" name="submit" id="submit" onclick="console.log('Button was click')">Click 1</button>
+
+<br>
+
+<button type="submit" name="submit" id="submit" ondblclick="console.log('click Button two times')">Click 2</button>
+
+<br>
+
+<div id="div1" onmouseover="mousein()" onmouseout="mouseout()" class="bg-blue-500 p-7 text-white h-28 w-28 text-center">
+<span>this is a box</span>
+</div>
+
+<br>
+
+<button id="btn1" type="button">Click to get 26</button>
+<br>
+
+<button id="btn2" type="button">Click Button 2</button>
+
+<br>
+
+<button class="btn3" type="submit">Click Button 3</button> -->
+
+
+
+
+
+
+
+
+<div class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h3>Add access group to the user</h3>
+
+    <div class="user-info">
+      <div class="user-avatar">
+        <div class="avatar">A</div>
+      </div>
+      <div class="user-details">
+        <h4>ADMIN</h4>
+        <p>Position, Department</p>
+        <p>
+          <i class="fa fa-phone"></i> 000-000-000<br>
+          <i class="fa fa-envelope"></i> admin@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="group-selection">
+      <label>Assigned Groups:</label>
+      <div class="selected-groups">
+        <div class="group-chip">USER <span (click)="removeGroup('USER')">&times;</span></div>
+        <div class="group-chip">ADMINISTRATOR <span (click)="removeGroup('ADMINISTRATOR')">&times;</span></div>
+      </div>
+      <input type="text" placeholder="2 Groups selected" readonly>
+    </div>
+
+    <div class="modal-footer">
+      <button class="cancel-btn" (click)="closeModal()">Cancel</button>
+      <button class="save-btn" (click)="saveChanges()">Save</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/project/CodeRunnerFile.js" defer></script>
+  <script src="./script.js" defer></script>
+</body>
+</html>

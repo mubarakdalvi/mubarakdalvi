@@ -1,0 +1,19 @@
+ main section h1 {
+     max-width: max-content;
+     max-height: min-content;
+     padding-left: 45%;
+     padding-top: 20%;
+ }
+
+ main section h3 {
+     padding-left: 35%;
+ }
+
+ span {
+     color: red;
+     font: bold;
+ }
+
+ body {
+     background-color: #F0F8FF;
+ }

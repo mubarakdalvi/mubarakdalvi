@@ -1,0 +1,8 @@
+<form class="flex"  [formGroup]="loginForm">
+  <h4>PLease Login</h4>
+  <input type="email" placeholder="type email" [formControl]="email">
+  <h5 class="text-red-500" [hidden]="email.valid || email.untouched">Enter Correct Email</h5>
+  <input type="password" placeholder="enter password"  [formControl]="password">
+  <button (click)="login()">Login</button>
+  <button (click)="reset()">reset</button>
+</form>

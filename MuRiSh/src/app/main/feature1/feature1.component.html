@@ -1,0 +1,57 @@
+<br>
+<!-- using control flow @for we can iterate over sequence -->
+<!-- we dont have apply control flow on element like directives  -->
+<h4 class="bg-purple-100 border">
+  @for(user of users;track user.id){
+    <p>ID :- {{user.id}}
+       Name :- {{user.name}}
+       Age :- {{user.age}}
+       Male :- {{user.isMale}}
+      </p>
+  }
+</h4>
+
+<br>
+<!-- @if ,else if, and else control flow  -->
+
+<h4 class="bg-purple-100 border">
+  @for(user of users;track user.id){
+    @if(user.id <= 1) {
+  <p>ID :- {{user.id}}
+    Name :- {{user.name}}
+    Age :- {{user.age}}
+    Male :- {{user.isMale}}
+  </p>}@else if(user.age <= 75){
+    <p>ID :- {{user.id}}
+      Name :- {{user.name}}
+      Age :- {{user.age}}
+      Male :- {{user.isMale}}
+    </p>
+  }@else {
+    Naam Me kya Rakha Hai <br>
+  }
+  }
+</h4>
+<br>
+<!-- directive having same functionality but they are applied on element -->
+<!-- as comapared to control flow it is is easy -->
+<!-- this is ng for directive  and when using anything related to directics all remember to import commonModule -->
+<!-- for else we have create a block or ng template-->
+<!-- this can change dom structure -->
+<div *ngFor="let user of users" class="bg-orange-50">
+  <p *ngIf="user.age <= 900;else elsecondition">
+    ID :- {{user.id}}
+    Name :- {{user.name}}
+    Age :- {{user.age}}
+    Male :- {{user.isMale}}
+  </p>
+  <!-- creating ng template and have to name it -->
+  <ng-template #elsecondition>
+    <p>
+      ID :- {{user.id}}
+      Name :- {{user.name}}
+      Age :- {{user.age}}
+      Male :- {{user.isMale}}
+    </p>
+  </ng-template>
+</div>

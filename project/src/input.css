@@ -1,0 +1,5 @@
+/*this is tailwincs rules */ 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

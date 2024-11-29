@@ -1,0 +1,29 @@
+<div class="flex items-center justify-normal gap-2.5">
+  <button class="text-2xl" (click)="isToggleVisible()">
+    <span class="flex -space-x-1.5 -space-y-1">
+      <i class="fa-regular fa-envelope icon"></i>
+      <span
+        *ngIf="notificationCount === 0"
+        class="flex items-center justify-center bg-red-700 text-white text-[10px] w-3.5 h-3.5 rounded-full"
+      >
+        {{ messageCount }}
+      </span>
+    </span>
+  </button>
+  <span class="text-2xl" (click)="isToggleVisible()">
+    <span class="flex items-center -space-x-2.5 -space-y-3">
+      <i class="fa-regular icon fa-bell icon"></i>
+      <span
+        class="flex items-center justify-center bg-red-700 text-white text-[10px] w-3.5 h-3.5 rounded-full"
+      >
+        {{ notificationCount }}
+      </span>
+    </span>
+  </span>
+
+  <app-notification-modal
+    *ngIf="isToggleVisible()"
+    [isVisible]="isNotificationVisible"
+    (closeNotification)="isToggleVisible()"
+  ></app-notification-modal>
+</div>

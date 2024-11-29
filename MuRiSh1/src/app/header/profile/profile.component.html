@@ -1,0 +1,42 @@
+<form [formGroup]="userForm" (ngSubmit)="modifyUser()">
+  <app-shared-modal [isVisible]="isVisible" (close)="closeUser()">
+    <div class="modal-header flex flex-col gap-4">
+      <h3 class="text-sm text-black font-s p-2">Add access group to the user</h3>
+    </div>
+    <div class="modal-body flex flex-col gap-4">
+      <div class="flex flex-row">
+        <div
+          class="bg-[#263065] w-24 h-24 flex items-center justify-center border rounded-sm text-white font-bold text-3xl">
+          {{ userNameInitial }}
+        </div>
+        <span class="justify-center">
+          {{userName}}
+        </span>
+      </div>
+      <div class="flex flex-col gap-1 ">
+        <label class="text-sm font-medium text-gray-700" for="permission">
+          Assign Groups:
+        </label>
+        <select multiple [(ngModel)]="selectedUsers" id="permission"
+          class=" px-3 py-2 overflow-auto border rounded-sm border-blue-300 focus:border-blue-300 "
+          (change)="onSelectChnage($event)" formControlName="selectedUser" required>
+          <option value="{{selectedUsers.length}} Groups Selected |" disabled class="absolute">
+            {{selectedUsers.length}} Groups Selected |</option>
+          <option *ngFor="let user of Users" [value]="user.id" class="absolute">
+            {{ user.user }}
+          </option>
+        </select>
+        <span *ngFor="let seleteduser of selectedUsers" class="bg-white">{{seleteduser.user}}
+          <i class="fa fa-times" (click)="removeUser(seleteduser.user)"></i></span>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="" (click)="closeUser()">
+        Cancel
+      </button>
+      <button type="submit" class="" [disabled]="userForm.invalid">
+        Save
+      </button>
+    </div>
+  </app-shared-modal>
+</form>

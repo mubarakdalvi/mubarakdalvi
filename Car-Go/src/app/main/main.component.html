@@ -1,0 +1,30 @@
+<div class="flex min-h-screen relative w-full bg-[#fffcf8] flex-col">
+  <app-navbar
+    [isSidebarToggle]="isSidebarToggle"
+    (closeSidebar)="toggleSidebar()"
+    (hideSidebar)="isSidebar()"
+    aria-label="Main Navigation"
+  ></app-navbar>
+
+  <div
+    class="flex flex-1 overflow-y-hidden"
+    [ngClass]="
+      isSidebarToggle
+        ? 'h-full overflow-y-auto'
+        : 'h-nav-screen max-h-screen overflow-y-scroll'
+    "
+  >
+    <app-sidebar
+      [isSidebarToggle]="isSidebarToggle"
+      [isSidebarVisible]="isSidebarVisible"
+      class="flex gap-3"
+      aria-label="Sidebar Navigation"
+    ></app-sidebar>
+
+    <div class="flex flex-1 flex-col min-h-full">
+      <div class="flex-grow flex flex-col h-full overflow-y-auto" role="main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

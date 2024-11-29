@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keyword" content="HTML CSS JAVASCIPT">
+  <meta name="author" content="Mubarak Dalvi">
+  <meta name="description" content="Dummy">
+  <base href="#./rms.html" target="_blank">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="shaotherstextpassword-Kc3password3vGBEqzTmouAECnVceyQqyqdsSiqLQISBLpassword9aUWfemaleU/M7pSPA/gEUZQqvtextcwxfemaleOnYxTxveothersUMgothersGT6LfemaleJJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="../images/Signika.png" rel="icon" type="images/png">
+  <link rel="stylesheet" href="./rms.css">
+  <title>SMuRDa</title>
+</head>
+
+<body>
+  <header>
+    <section>
+      <div>
+        <details>
+          <summary>
+            <img src="../images/Profile.png" alt="Profile-image">
+          </summary>
+          <ul>
+            <li>Preference</li>
+            <li>Setting</li>
+            <li>Help & Feedback</li>
+            <li>logout</li>
+          </ul>
+        </details>
+        <ul class="nb">
+          <li>
+            Home
+            <a href="#home" target="_self"></a>
+            <i class="fa fa-home"></i>
+          </li>
+          <li>
+            News
+            <i class="fa fa-newspaper"></i>
+          </li>
+          <li><i></i></li>
+          <li><i></i></li>
+          <li><i></i></li>
+          <li><i></i></li>
+          <li><i></i></li>
+        </ul>
+      </div>
+      </section>
+  </header>
+  <main>
+    <section>
+      <div>
+      <nav>
+        <ul>
+          <li><a href="#">Our Services</a</li>
+          <li><a href="#">Bills</a></li>
+          <li><a href="#">Main</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Gaming</a></li>
+          <li><a href="#">Sales</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Time Management</a></li>
+          <li><a href="#">TV</a></li>
+          <li><a href="#">Doraemon</a></li>
+        </ul>
+      </nav>
+      </div>
+    </section>
+    </div>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section>
+      <form action="../submit/submit.html" id="Form" autocomplete="on">
+        <fieldset>
+          <legend>Sigup</legend>
+          <div>
+            <label for="text" id="username">Username:
+              <!-- we can use placeholder instead of value="username" 
+             cause of it takes space and user have to remove it with place
+             holder the text is giving caption but when user starts
+             to type ,user doesnt have to remove the text as it goes away 
+             on its own -->
+              <input type="text" placeholder="username" name="username" id="text" required>
+            </label>
+          </div>
+          <div><label for="email">Enter Your Email:
+              <input type="email" name="email" placeholder="Enter Email" id="email"
+                pattern="^[A-Za-z0-9./%+-_]+@{a-zA-Z0-9.-}+\.[a-zA-Z]{2,}$" required>
+            </label>
+          </div>
+          <div>
+            <label for="pass">Password:
+              <input type="password" placeholder="Pass" name="pass" id="pass" required>
+            </label>
+          </div>
+          <div>
+            <label for="countryCode">CountryCode
+              <select id="countryCode" name="countryCode">
+                <option value="+91">India (+91)</option>
+                <option value="+1">USA (+1)</option>
+                <option value="+44">UK (+44)</option>
+                <option value="+81">Japan (+81)</option>
+              </select>
+            </label>
+            <label for="numberInput">Enter Mobile Number
+              <input type="password" id="numberInput" name="mobile" placeholder="1234567890" pattern="[0-9]{10}"
+                required>
+            </label>
+          </div>
+          <div>
+            <label>Gender:
+              Male: <input type="radio" value="Male" name="Gender" id="male">
+              Female:<input type="radio" value="Female" name="Gender" id="female">
+              Other:<input type="radio" value="Others" name="Gender" id="others" checked>
+            </label>
+          </div>
+          <div>
+            <label for="birthday">Enter DOB </label>
+            <input type="date" name="birthday" id="birthday">
+          </div>
+          <div>
+            <label for="city">Select Your City</label>
+            <select name="city" id="city">
+              <option value="Pune">Pune</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="chennai">Chennai</option>
+              <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+              </optgroup>
+              <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </optgroup>
+            </select>
+          </div>
+          <div>
+            <input list="browsers" name="browsers">
+            <datalist id="browsers">
+              <option value="Edge"></option>
+              <option value="Firefox"></option>
+              <option value="Chrome"></option>
+            </datalist>
+          </div>
+          <div>
+            <!-- <input type="submit" name="submit" value="Submit" onclick="window.location.href='submit/submit.html'"> fisrt method -->
+            <button formaction="../submit/submit.html" formtarget="_blank" type="submit" name="submit">Submit</button>
+            <!--Second Method -->
+            <input type="reset" value="Reset" name="reset">
+          </div>
+          <div>
+            <textarea name="Enquiry" id="Enquiry" placeholder="Please provide us your valuable feedback"></textarea>
+          </div>
+        </fieldset>
+      </form>
+      <div id="show"></div>
+      <div id="successMessage" style="display: none;">Form successfully submitted! Redirecting in 5 seconds...</div>
+      </section>
+  </main>
+  <footer>
+    <div>
+      <div>
+        <ul>
+          <li><a href="../t&c/t&c.html">Terms & Conditions</a></li>
+          <li><a href="../faq/faq.html">FAQs</a></li>
+          <li>Feedback</li>
+          <li>About Us</li>
+          <li>Customer Care</li>
+          <li><a href="../location/location.html" target="_parent">Locate Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./rms.js" defer></script> <!--we can also use async="off"-->
+</body>
+</html>

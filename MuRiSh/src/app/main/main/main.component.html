@@ -1,0 +1,63 @@
+<!-- <app-sidebar></app-sidebar>
+<app-feature1></app-feature1> -->
+<!-- we are sending parent to child data with input decorator -->
+ <!-- we will get error here if we provide boolean or number values in double qoutes
+   Type 'string' is not assignable to type 'number' -->
+<!-- <br>
+<app-feature2 userName="shanks" isMale="true" age="74"></app-feature2>
+<app-feature2 userName="luffy" isMale="true" age="725"></app-feature2>
+<app-feature2 userName="nami" isMale="false" age="175"></app-feature2>
+
+<br> -->
+<!-- looping with directive and input decorator with that parent to child data showing -->
+ <!-- you have to provide as property binding , so we are hsrcoding value it will be dynamic means iterating-->
+<!-- with ng directives we are sending data from parent to child -->
+ <!-- <app-feature2 *ngFor="let user of users"
+[id]="user.id"
+[userName]="user.name"
+[isMale]="user.isMale"
+[age]="user.age">
+</app-feature2> -->
+
+<app-feature2
+*ngFor="let user of users"
+[id]="user.id"
+[userName]="user.name"
+[isMale]="user.isMale"
+[age]="user.age"
+(myEvent)="recievedData1($event)">
+</app-feature2>
+<!-- the myEvent is event emmiter -->
+<br>
+<app-feature2
+*ngFor="let user of users"
+[id]="user.id"
+[userName]="user.name"
+[isMale]="user.isMale"
+[age]="user.age"
+(ourEvent)="recievedData2($event)">
+</app-feature2>
+<!-- this is with  -->
+
+<br>
+<app-feature2
+*ngFor="let user of users"
+[id]="user.id"
+[userName]="user.name"
+[isMale]="user.isMale"
+[age]="user.age"
+(yourEvent)="recievedData3($event)">
+</app-feature2>
+
+<!-- with this we can actually add more than one event in the same element -->
+ <!-- this single element have three working event wich will do different works -->
+<app-feature2
+*ngFor="let user of users"
+[id]="user.id"
+[userName]="user.name"
+[isMale]="user.isMale"
+[age]="user.age"
+(myEvent)="recievedData1($event)"
+(yourEvent)="recievedData3($event)"
+(ourEvent)="recievedData2($event)">
+</app-feature2>

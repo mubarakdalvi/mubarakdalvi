@@ -1,0 +1,20 @@
+<h1 class="bg-black text-center text-white">Count {{counterservice.getCounter()}} </h1>
+<br>
+<button id="1" class="border-2 border-black ml-6 rounded-md p-0.5"  (click)="counterservice.increamentCounter()">Increament</button>
+
+<button id="2"  class="border-2 border-black ml-6 rounded-md p-0.5"  (click)="counterservice.decreamentCounter()">Decreament</button>
+
+<br>
+
+<!-- here we are using signal -->
+
+<h1>Count {{counterservice.getsig()}}</h1>
+
+<br>
+<h1>Double Count {{counterservice.doublesig()}}</h1>
+
+<br>
+<button class="border-2 border-black p-0.5" (click)="counterservice.increamentSig()">Signal</button>
+
+<br>
+<button class="border-2 border-black p-0.5"  (click)="sendData()">Send Data</button>

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/fontawesom/style.min.css";
+@import "assets/sccs/scrolbar.scss";
+@import "assets/sccs/styles.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

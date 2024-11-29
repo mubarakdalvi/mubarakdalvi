@@ -1,0 +1,42 @@
+<div
+  class="no-print w-full sticky rounded-b-xl bg-[#eef7f0] text-white flex justify-between px-3 items-center h-11"
+  [ngClass]="isSidebarToggle ? 'pl-3' : 'pl-3 md:px-11'"
+>
+  <span class="flex flex-row items-center justify-between gap-2.5">
+    <img
+      *ngIf="!isSidebarToggle"
+      src="assets/logos/Cargo 2.png"
+      [routerLink]="['./dashboard']"
+      alt="cargo/png"
+      class="size-9 md:size-14"
+      id="cargologo"
+    />
+    <img
+      *ngIf="!isSidebarToggle"
+      src="assets/logos/cargo name.png"
+      alt="cargo/png"
+      class="size-14 md:size-20"
+      id="cargo"
+    />
+    <img
+      *ngIf="isSidebarToggle"
+      [routerLink]="['./dashboard']"
+      src="assets/logos/Cargo wit name.png"
+      class="size-9 md:size-11"
+    />
+  </span>
+  <span class="hover:bg-white py-2 px-2 hover:rounded-full" (click)="close()">
+    <span class="flex items-center">
+      <mat-icon class="transform scale-125">{{
+        isSidebarToggle ? "arrow_forward" : "menu"
+      }}</mat-icon>
+    </span>
+  </span>
+  <span class="flex flex-1 justify-center gap-5"
+    ><app-search></app-search
+  ></span>
+  <ul class="flex items-center justify-end gap-5">
+    <app-notifications></app-notifications>
+    <app-profile-dropdown></app-profile-dropdown>
+  </ul>
+</div>

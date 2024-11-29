@@ -1,0 +1,38 @@
+<br>
+<p class="p-1 bg-blue-100">
+  This is Interpolation
+  Name :- {{ name }}
+  Age :- {{ age }}
+  Male :- {{is_male}}
+  Blood Group :- {{bg_group}}
+</p>
+
+<br>
+<!-- [disabled]="isbtndisabled" property binding with event are in [] brackets onclick we now it is working or not -->
+this is property binding : -
+<button [disabled]="isbtndisabled" onclick="console.log('Hi')" class="border-2 border-black p-0.5 " >Submit</button>
+<!-- event binding with event are in () brackets -->
+ <!-- with this we cannot see every input -->
+<br>
+this is event binding : -
+<input  class="border-2 border-black p-0.5 " type="text"  placeholder="Please Enter Something" (change)="onChange()">
+<br>
+this another method of event binding : -
+<!-- event binding another method  -->
+<!-- with this we can see every input -->
+<input class="border-2 border-black p-0.5 " type="text"  placeholder="Please Enter Something" (change)="myChange($event)">
+<br>
+<!-- two way data binding with ng attribute have to add both propety biding and event binding for two way data binding -->
+<!-- even if we dont add property attribute then it will work -->
+two way data binding  :-
+<h3>Input Value :- {{inputval1}}</h3>
+<input class="border-2 border-black p-0.5 " type="text" [value]="inputval1" (change)="yourChange($event)" placeholder="Please Enter Something">
+
+<!-- two way data binding with ngmodel  -->
+<!-- banana in the box  -->
+ <!-- alway remeber to import formsmodule when using ngmodule attribute directives and for diectives common module -->
+ <br>
+two way binding with ngmodel :-
+<h3>Input Value :- {{inputval2}}</h3>
+<input class="border-2 border-black p-0.5" [(ngModel)]="inputval2" type="text" placeholder="Please Enter Something">
+<br>

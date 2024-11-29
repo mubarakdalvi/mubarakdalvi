@@ -1,0 +1,21 @@
+<!-- we are learning about pipes they are methods in angular -->
+<br>
+<!-- here we will use pipes and also have to import common module -->
+<div appMydirectives class="flex  bg-blue-600">
+<p  class="p-1 text-white">
+  ID {{ id }} <br>
+  Name {{ name | titlecase }} <br>
+  Full Name {{ fullName | titlecase }} <br>
+  Age {{ age | date }} <br>
+  Salary {{ salary | currency:"INR" }} <br>
+  Country
+  <input name="CountryCode" list="countrycode" placeholder="Search Country" class="bg-white text-black p-2 rounded w-36"
+    [(ngModel)]="selectedCountry">
+  <datalist id="countrycode" class="bg-white text-black">
+    <option *ngFor="let country of filteredCountryKeys" [value]="country">
+      {{ country | countrycode:{ countryCode: true } }}
+    </option>
+  </datalist>
+  {{ selectedCountry | countrycode:{ countryCode: true } }}
+</p>
+</div>
